@@ -1,37 +1,52 @@
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title> เย้ !!! </title>
+    <title> summation </title>
   </head>
   <body>
     <?php
     $name=$_POST['name'];
-    $lname=$_POST['lname'];
-    $nname=$_POST['nname'];
-    $day=$_POST['day'];
+    $nic=$_POST['nic'];
     $age=$_POST['age'];
+    $day=$_POST['day'];
+
+    $sex=$_POST['sex'];
     $phone=$_POST['phone'];
     $email=$_POST['email'];
-    $fb=$_POST['fb'];
-    $sex=$_POST['sex'];
-      if($age<100 && $age>20){
+    $univ=$_POST['fb'];
+    $loc=$_POST['col'];
+    $hob=$_POST['lo'];
+
     echo "<p>";
-    echo "<b> ข้อมูล USer </b><br/>";
-    echo "Name :: <i> $name </i><br/>";
-    echo "lName :: <i> $lname </i><br/>";
-    echo "Nname :: <i> $nname </i><br/>";
-    echo "day :: <i> $day </i><br/>";
-    echo "Age :: <i> $age </i><br/>";
-    echo "phone :: <i> $phone </i><br/>";
-    echo "email :: <i> $email </i><br/>";
-    echo "fb :: <i> $fb </i><br/>";
-    echo "sex :: <i> $sex </i><br/>";
-    echo "Result !! :";
-  }
-  else {
-    echo "plase tye again !!";
-  }
+    echo "<b> USER DATA </b><br/>";
+    echo "Name :: <i> $name </i><i> ($nic) </i><br/>";
+
+    if($age>="1"&&$age<="100"){
+
+
+         if ($age>=1&&$age<=12){
+       echo "Age :: <i> $age </i> เด็ก <br/>";}
+    else  if ($age>=13&&$age<=20){
+    echo "Age :: <i> $age </i>วัยรุ่น <br/>";}
+    else  if ($age>=21&&$age<=59){
+    echo "Age :: <i> $age </i>วัยทำงาน <br/>";}
+    else  if ($age<=60){
+    echo "Age :: <i> $age </i>วัยทอง <br/>";}
+
+}
+    else echo " Age :: Again!!!! </i><br/>";
+
+
+    echo "Brithday :: <i> $day </i><br/>";
+
+    if($sex ==  "1") echo("Sex :: ชาย <br/>");
+    if($sex ==  "0") echo("Sex :: หญิง <br/>");
+    echo "Number Phone :: <i> $phone </i><br/>";
+    echo "Email :: <i> $email </i><br/>";
+    echo "Facebook :: <i> $fb </i><br/>";
+    echo "Location :: <i> $col </i><br/>";
+    echo "Hobby :: <i> $lo </i><br/>";
+
      ?>
   </body>
 </html>
